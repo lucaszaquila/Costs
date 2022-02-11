@@ -34,10 +34,13 @@ export default ({btnText, handleSubmit, projectData}) => {
     }
 
     function handleCategory(e) {
-        setProject({...project, category :{
-            id: e.target.value,
-            name: e.targt.options[e.target.selectedIndex].text
-        }})
+        setProject({
+            ...project, 
+            category: {
+                id: e.target.value,
+                name: e.target.options[e.target.selectedIndex].text,
+            },
+        })
     }
 
     return (
@@ -48,6 +51,7 @@ export default ({btnText, handleSubmit, projectData}) => {
                 name="name" 
                 placeholder="Insira o nome do projeto"
                 handleOnChange={handleChange}
+                value={project.name ? project.name : ''}
             />
             <Input 
                 type="number" 
@@ -55,11 +59,14 @@ export default ({btnText, handleSubmit, projectData}) => {
                 name="budget" 
                 placeholder="Insira o orçamento total"
                 handleOnChange={handleChange}
+                value={project.budget ? project.budget : ''}
             />
             <Select 
                 name="category_id" 
                 text="Selecione a categoria" 
                 options={categories}
+                handleOnChange={handleCategory}
+                value={project.category ? project.category.id : ''}
             />
             <SubmitButton text={btnText}/>
         </form>

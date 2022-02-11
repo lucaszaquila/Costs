@@ -8,6 +8,7 @@ export default ({text, name, options, handleOnChange, value}) => {
                 name={name} 
                 id={name} 
                 onChange={handleOnChange}
+                value={value || ''}
             >
                 <option>Selecione uma opção</option>
                 {options.map((option) => (
