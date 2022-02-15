@@ -1,7 +1,7 @@
 import styles from './Message.module.css';
 import {useState, useEffect} from 'react'
 
-export default ({type, msg}) => {
+export default function Message ({type, msg}) {
     const [visible, setVisible] = useState(false)
 
     useEffect(() =>{

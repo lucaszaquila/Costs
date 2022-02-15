@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import ProjectForm from '../project/ProjectForm'
 import styles from './NewProject.module.css'
 
-export default () => {
+export default function NewProject() {
     const navigate = useNavigate()
 
     function createPost(project) {
@@ -20,7 +20,7 @@ export default () => {
         })
         .then((resp) => resp.json())
         .then((data) => {
-            //redirect - navigate no lugaar do history
+            //redirect - navigate no lugar do history
             navigate('/projects', { message : 'Projeto criado com sucesso!'})
         })
         .catch(err => console.log(err))

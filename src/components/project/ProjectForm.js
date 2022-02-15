@@ -5,7 +5,7 @@ import Input from '../form/Input'
 import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
 
-export default ({btnText, handleSubmit, projectData}) => {
+export default function ProjectForm({btnText, handleSubmit, projectData}) {
     const [categories, setCategories] = useState([])
     const [project, setProject] = useState(projectData || [])
 
