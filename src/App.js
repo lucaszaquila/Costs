@@ -12,13 +12,13 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Navbar />
       <Container customClass="min_height">
         <Routes>
-            <Route exact path="/" element={<Home/>}/>
+            <Route path="/" element={<Home/>}/>
             <Route path="/company" element={<Company/>}/>
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/projects" element={<Projects/>}/>
@@ -30,5 +30,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

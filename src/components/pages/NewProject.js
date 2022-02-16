@@ -7,10 +7,6 @@ export default function NewProject() {
     const navigate = useNavigate()
 
     function createPost(project) {
-        // Initialize cost and services
-        project.cost = 0
-        project.services = []
-
         fetch("http://localhost:5000/projects", {
             method: "POST",
             headers: {
@@ -19,12 +15,10 @@ export default function NewProject() {
             body: JSON.stringify(project),
         })
         .then((resp) => resp.json())
-        .then((data) => {
-            //redirect - navigate no lugar do history
+        .then(() => {
             navigate('/projects', { message : 'Projeto criado com sucesso!'})
         })
         .catch(err => console.log(err))
-        
     }
 
     return (

@@ -2,7 +2,7 @@ import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
 
 import styles from './Footer.module.css'
 
-function Footer() {
+export default function Footer() {
     return (
         <footer className={styles.footer}>
             <ul className={styles.social_list}>
@@ -22,5 +22,3 @@ function Footer() {
         </footer>
     )
 }
-
-export default Footer
