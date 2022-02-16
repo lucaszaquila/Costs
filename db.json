@@ -1,15 +1,26 @@
 {
   "projects": [
     {
-      "name": "Primeiro projeto",
-      "budget": "10000",
+      "name": "Prototipo",
+      "budget": "5000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "A Tribuna",
+      "budget": "500",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
     }
   ],
   "categories": [

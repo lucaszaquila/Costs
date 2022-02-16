@@ -1,12 +1,11 @@
+import {useState, useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
 
-import {useState, useEffect} from 'react'
-
-import Message from "../layout/Message"
 import Container from "../layout/Container"
 import Loading from "../layout/Loading"
 import LinkButton from "../layout/LinkButton"
 import ProjectCard from '../project/ProjectCard'
+import Message from "../layout/Message"
 
 import styles from "./Projects.module.css"
 
@@ -14,10 +13,11 @@ export default function Projects(){
     const [projects, setProjects] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
     const [projectMessage, setProjectMessage] = useState('')
-
-    const location = useLocation()
+    
     let message = ''
-    if(location.state){
+    const location = useLocation()
+
+    if(location.state) {
         message = location.state.message
     }
 
@@ -34,7 +34,7 @@ export default function Projects(){
                 setProjects(data)
                 setRemoveLoading(true)
             })
-            .catch((err) => { console.log(err)})
+            .catch((err) => console.log(err))
         },500)
     }, [])
 
