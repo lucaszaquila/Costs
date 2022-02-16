@@ -1,36 +1,15 @@
 {
   "projects": [
     {
-      "name": "A Tribuna",
+      "name": "Primeiro projeto",
       "budget": "10000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
       "cost": 0,
       "services": [],
       "id": 1
-    },
-    {
-      "name": "Teste",
-      "budget": "20000",
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "aaa",
-      "budget": "123123",
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "name": "Teste 2",
-      "budget": "120000",
-      "cost": 0,
-      "services": [],
-      "id": 4
     }
   ],
   "categories": [
