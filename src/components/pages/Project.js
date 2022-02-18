@@ -1,4 +1,4 @@
-import {parse, v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 
 import styles from './Project.module.css'
 
@@ -14,7 +14,7 @@ import ServiceCard from '../service/ServiceCard'
 
 export default function Projects() {
     //Hook para captura de parametros via url
-    const {id} = useParams()
+    let {id} = useParams()
 
     const [project, setProject] = useState([])
     const [services, setServices] = useState([])
@@ -27,7 +27,7 @@ export default function Projects() {
         //Timeout para simulação de carregamento
         setTimeout(() => {
             fetch(`http://localhost:5000/projects/${id}`, {
-            projectmethod: 'GET',
+            method: 'GET',
             headers: {
                 'Content-Type' : 'application/json'
             }
