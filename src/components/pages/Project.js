@@ -1,4 +1,4 @@
-import {parse, v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 
 import styles from './Project.module.css'
 
@@ -27,7 +27,7 @@ export default function Projects() {
         //Timeout para simulação de carregamento
         setTimeout(() => {
             fetch(`http://localhost:5000/projects/${id}`, {
-            projectmethod: 'GET',
+            method: 'GET',
             headers: {
                 'Content-Type' : 'application/json'
             }
