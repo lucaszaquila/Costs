@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 import styles from '../project/ProjectForm.module.css'
 
@@ -10,7 +10,7 @@ export default function ServiceForm({handleSubmit, btnText, projectData}) {
     
     function submit(e) {
         e.preventDefault()
-        projectData.services.push(service)
+        projectData.services?.push(service)
         handleSubmit(projectData)
     }
 

@@ -61,7 +61,7 @@ export default function Projects(){
             {message && <Message msg={message} type="success"/>}
             {projectMessage && <Message msg={projectMessage} type="success"/>}
             <Container customClass="start">
-                {projects.length > 0 &&
+                {projects?.length > 0 &&
                     projects.map((project) => (
                         <ProjectCard 
                             id={project.id}

@@ -70,7 +70,7 @@ export default function Projects() {
     function createService(project) {
         setMessage('')
 
-        const lastService = project.services[project.services.length - 1]
+        const lastService = project.services[project.services?.length - 1]
 
         lastService.id = uuidv4()
 
@@ -187,19 +187,15 @@ export default function Projects() {
                         </div>
                         <h2>Serviços</h2>
                         <Container customClass="start">
-                            {services.length > 0 &&
+                            {services?.length > 0 ?
                                 services.map((service) => (
                                     <ServiceCard
-                                        id={service.id}
-                                        name={service.name}
-                                        cost={service.cost}
-                                        description={service.description}
+                                        {...services}
                                         key={service.id}
                                         handleRemove={removeService}
                                     />
-                                ))
+                                )) : <p>Não há serviços cadastrados.</p>
                             }
-                            {services.length === 0 && <p>Não há serviços cadastrados.</p>}
                         </Container>
                     </Container>
                 </div>
